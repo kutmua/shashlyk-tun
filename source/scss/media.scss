@@ -19,13 +19,13 @@
     .nav__list {
       padding: 25px 0;
       align-items: flex-start;
-      .nav__link.nav-link {
+      .nav-link {
         font-size: 20px;
         line-height: 25px;
       }
     }
   }
-  .basket__link-low-resolution {
+  .basket-link-low-resolution {
     display: block;
   }
 
@@ -179,7 +179,7 @@
     height: 47px;
   }
 
-  .nav .nav__list .nav__link.nav-link {
+  .nav .nav__list .nav-link {
     font-size: 18px;
     line-height: 20px;
   }
@@ -316,7 +316,9 @@
     margin-bottom: 20px;
     max-width: 160px; 
   }
-  .footer-content__social-list-item-link {
+  .footer .footer-row .footer-content .footer-content__social-list .footer-content__social-list-item-link {
+    width: 30px;
+    height: 30px;
     svg {
       width: 30px;
       height: 30px;

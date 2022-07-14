@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,56 +27,64 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header" id="header">
-    <div class="header__container container">
-      <div class="row">
-        <div class="col-12 flex">
-          <a class="header__logo-link" href="index.html">
-            <img src="img/logo.webp" alt="Логотип Шашлык Тун">
-          </a> 
-          
-          <nav class="nav">
-            <ul class="nav__list flex">
-              <li class="nav__item">
-                <a class="nav__link" href="#about-us">
-                  О нас
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#menu">
-                  Меню
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#delivery">
-                  Доставка
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#contacts">
-                  Контакты
-                </a>
-              </li>
-              <li class="nav__item basket">
-                <a class="nav__link basket__link" href="#basket" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25 25H0V5.90906H25V25ZM1.57233 23.6363H23.4277V7.27269H1.57233V23.6363Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6541 11.4545H18.0818V4.90909C18.0818 2.95455 16.2474 1.36364 13.9937 1.36364H11.0587C8.80502 1.36364 6.97064 2.95455 6.97064 4.90909V11.4545H5.39832V4.90909C5.39832 2.18182 7.91404 0 11.0587 0H13.9937C17.1384 0 19.6541 2.18182 19.6541 4.90909V11.4545Z" fill="white"/>
-                  </svg>                
-                </a>
-              </li>
-              <li class="nav__item number">
-                <a class="nav__link basket-link" href="tel:+79189611046">
-                  +7 (918) 961-10-46
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+  <nav class="navbar navbar-expand-lg" id="header">
+    <div class="container-fluid container header">
+      <button class="navbar-toggler flex" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-toggler-icon-top"></span>
+        <span class="navbar-toggler-icon navbar-toggler-icon-medium"></span>
+        <span class="navbar-toggler-icon navbar-toggler-icon-bottom"></span>
+      </button>
 
+      <a class="navbar-brand header__logo-link" href="index.html">
+        <img class="header__logo-img" src="img/logo.webp" alt="Логотип Шашлык Тун">
+      </a>
+      
+      <a class="nav-link basket-link-low-resolution" href="#basket" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M25 25H0V5.90906H25V25ZM1.57233 23.6363H23.4277V7.27269H1.57233V23.6363Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6541 11.4545H18.0818V4.90909C18.0818 2.95455 16.2474 1.36364 13.9937 1.36364H11.0587C8.80502 1.36364 6.97064 2.95455 6.97064 4.90909V11.4545H5.39832V4.90909C5.39832 2.18182 7.91404 0 11.0587 0H13.9937C17.1384 0 19.6541 2.18182 19.6541 4.90909V11.4545Z" fill="white"/>
+        </svg>                
+      </a>
+
+      <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
+        <ul class="nav__list navbar-nav me-auto flex">
+          <li class="nav__item nav-item">
+            <a class="nav__link nav-link" href="#about-us">
+              О нас
+            </a>
+          </li>
+          <li class="nav__item nav-item">
+            <a class="nav__link nav-link" href="#menu">
+              Меню
+            </a>
+          </li>
+          <li class="nav__item nav-item">
+            <a class="nav__link nav-link" href="#delivery">
+              Доставка
+            </a>
+          </li>
+          <li class="nav__item nav-item">
+            <a class="nav__link nav-link" href="#contacts">
+              Контакты
+            </a>
+          </li>
+          <li class="nav__item nav-item basket">
+            <a class="nav__link nav-link basket__link" href="#basket" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 25H0V5.90906H25V25ZM1.57233 23.6363H23.4277V7.27269H1.57233V23.6363Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6541 11.4545H18.0818V4.90909C18.0818 2.95455 16.2474 1.36364 13.9937 1.36364H11.0587C8.80502 1.36364 6.97064 2.95455 6.97064 4.90909V11.4545H5.39832V4.90909C5.39832 2.18182 7.91404 0 11.0587 0H13.9937C17.1384 0 19.6541 2.18182 19.6541 4.90909V11.4545Z" fill="white"/>
+              </svg>                
+            </a>
+          </li>
+          <li class="nav__item nav-item number">
+            <a class="nav__link nav-link number__link" href="tel:+79189611046">
+              +7 (918) 961-10-46
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <main>
     <section class="privacy section">
