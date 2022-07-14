@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Самый вкусный шашлык, приготовленный только из свежего мяса по семейным рецептам!">
+  <title>Шашлык Тун</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/site.webmanifest">
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#ff0000">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ff0000">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+
+  <!-- fonts -->
+  <link rel="preload" href="fonts/Verdana.woff2" as="font">
+  <link rel="preload" href="fonts/Verdana.woff" as="font">
+  <link rel="preload" href="fonts/Verdana-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/Verdana-Bold.woff" as="font">
+
+  <!-- swiper js -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <!-- main styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg" id="header">
+    <div class="container-fluid container">
+      <button class="navbar-toggler flex" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-toggler-icon-top"></span>
+        <span class="navbar-toggler-icon navbar-toggler-icon-medium"></span>
+        <span class="navbar-toggler-icon navbar-toggler-icon-bottom"></span>
+      </button>
+
+      <a class="navbar-brand header__logo-link" href="#">
+        <img class="header__logo-img" src="img/logo.webp" alt="Логотип Шашлык Тун">
+      </a>
+      
+      <a class="nav__link nav-link basket__link-low-resolution" href="#basket" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M25 25H0V5.90906H25V25ZM1.57233 23.6363H23.4277V7.27269H1.57233V23.6363Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6541 11.4545H18.0818V4.90909C18.0818 2.95455 16.2474 1.36364 13.9937 1.36364H11.0587C8.80502 1.36364 6.97064 2.95455 6.97064 4.90909V11.4545H5.39832V4.90909C5.39832 2.18182 7.91404 0 11.0587 0H13.9937C17.1384 0 19.6541 2.18182 19.6541 4.90909V11.4545Z" fill="white"/>
+        </svg>                
+      </a>
+
+      <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
+        <ul class="nav__list navbar-nav me-auto flex">
+          <li class="nav__item nav-item">
+            <a class="nav__link nav-link" href="#about-us">
+              О нас
+            </a>
+          </li>
+          <li class="nav__item nav-item">
+            <a class="nav__link nav-link" href="#menu">
+              Меню
+            </a>
+          </li>
+          <li class="nav__item nav-item">
+            <a class="nav__link nav-link" href="#delivery">
+              Доставка
+            </a>
+          </li>
+          <li class="nav__item nav-item">
+            <a class="nav__link nav-link" href="#contacts">
+              Контакты
+            </a>
+          </li>
+          <li class="nav__item nav-item basket">
+            <a class="nav__link nav-link basket__link" href="#basket" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 25H0V5.90906H25V25ZM1.57233 23.6363H23.4277V7.27269H1.57233V23.6363Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6541 11.4545H18.0818V4.90909C18.0818 2.95455 16.2474 1.36364 13.9937 1.36364H11.0587C8.80502 1.36364 6.97064 2.95455 6.97064 4.90909V11.4545H5.39832V4.90909C5.39832 2.18182 7.91404 0 11.0587 0H13.9937C17.1384 0 19.6541 2.18182 19.6541 4.90909V11.4545Z" fill="white"/>
+              </svg>                
+            </a>
+          </li>
+          <li class="nav__item nav-item number">
+            <a class="nav__link nav-link number__link" href="tel:+79189611046">
+              +7 (918) 961-10-46
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero section">
+      <div class="hero__container container">
+        <div class="row">
+          <div class="col-12">
+            <div class="hero-content">
+              <h1 class="hero__title title-h1">
+                <span>Вкусно</span>
+                <p>по-домашнему!</p>
+              </h1>
+  
+              <p class="hero__descr">
+                <span>Самый вкусный</span> шашлык, приготовленный только из&nbsp;свежего мяса по&nbsp;семейным рецептам!
+              </p>
+            </div>
+
+            <a href="#menu" class="hero__btn btn flex">
+              Заказать
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us section" id="about-us">
+      <div class="about-us__container container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="about-us__title title-h2">
+              О&nbsp;<span>нас</span> 
+            </h2>
+            <div class="about-us__content">
+              <p class="about-us__descr descr">
+                Мы&nbsp;&mdash; &laquo;<span>Шашлык</span> Тун&raquo;. Кафе-бар, который чтит традиции приготовления настоящего кавказского шашлыка.
+              </p>
+              <p class="about-us__descr descr">
+                Наша концепция&nbsp;&mdash; хорошая кухня, высокое качество обслуживания, вкусные и&nbsp;сочные шашлыки, приветливый персонал, демократичные цены. И, конечно&nbsp;же, домашняя обстановка.
+              </p>
+              <p class="about-us__descr descr">
+                Мы&nbsp;уделяем огромное внимание вкусу и&nbsp;качеству наших блюд. А&nbsp;наши повара полностью отдаются процессу приготовления и&nbsp;готовят с&nbsp;любовью только для вас.
+                Попробуйте! <span>И&nbsp;вы&nbsp;влюбитесь!</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row about-us__utp">
+          <div class="col-12">
+            <h2 class="about-us__title title-h2">
+              Почему мы&nbsp;<span> лучшие?</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row utp">
+          <div class="utp__card flex col-xl-8 col-lg-12 col-sm-12">
+            <p class="card-descr descr">
+              Самые <span>свежие</span> продукты и&nbsp;<span>лучшие</span> ингридиенты
+              <span>Особенная</span> технология приготовления
+            </p>
+          </div>
+          <div class="card-circle card-circle_products col-xl-4 col-lg-12 col-sm-12">
+          </div>
+        </div>
+
+        <div class="row utp">
+          <div class="card-circle card-circle_cooks col-xl-4 col-lg-12 col-sm-12">
+          </div>
+          <div class="utp__card flex col-xl-8 col-lg-12 col-sm-12">
+            <p class="card-descr descr">
+              <span>Лучшие</span> повора, с&nbsp;большим опытом работы
+              Готовят для вас <span>с&nbsp;любовью</span> в&nbsp;каждом кусочке
+            </p>
+          </div>
+        </div>
+
+        <div class="row utp">
+          <div class="utp__card flex col-xl-8 col-lg-12 col-sm-12">
+            <p class="card-descr descr">
+              Самые <span>веселые</span> банкеты, корпоративы, дни рождения и&nbsp;юбилеи только у&nbsp;<span> нас</span>
+            </p>
+          </div>
+          <div class="card-circle card-circle_party col-xl-4 col-lg-12 col-sm-12">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu section" id="menu">
+      <div class="menu__container container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="menu__title title-h2">
+              Меню
+            </h2>
+          </div>
+        </div>
+
+        <div class="row menu-category-content">
+          <div class="col-xl-3 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#pork" class="category__tab category__btn step-link btn flex tab-active" aria-label="Категория Свинина" data-path="pork">
+              <span class="category__tab-text">
+                Свинина
+              </span>
+            </a>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#sheepmeat" class="category__tab category__btn step-link btn flex" aria-label="Категория Баранина" data-path="sheepmeat">
+              <span class="category__tab-text">
+                Баранина
+              </span>
+            </a>
+          </div>
+          
+          <div class="col-xl-3 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#bird" class="category__tab category__btn step-link btn flex" aria-label="Категория Индейка & Курица" data-path="bird">
+              <span class="category__tab-text">
+                Индейка & Курица
+              </span>
+            </a>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#entree" class="category__tab category__btn step-link btn flex" aria-label="Категория Первое блюдо" data-path="entree">
+              <span class="category__tab-text">
+                Первое блюдо
+              </span>
+            </a>
+          </div>
+          
+          <div class="col-xl-3 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#sauces" class="category__tab category__btn step-link btn flex" aria-label="Категория Соусы" data-path="sauces">
+              <span class="category__tab-text">
+                Соусы
+              </span>
+            </a>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#salads" class="category__tab category__btn step-link btn flex" aria-label="Категория Салаты" data-path="salads">
+              <span class="category__tab-text">
+                Салаты
+              </span>
+            </a>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#vegetables" class="category__tab category__btn step-link btn flex" aria-label="Категория Овощи" data-path="vegetables">
+              <span class="category__tab-text">
+                Овощи
+              </span>
+            </a>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#slicing" class="category__tab category__btn step-link btn flex" aria-label="Категория Нарезка" data-path="slicing">
+              <span class="category__tab-text">
+                Нарезка
+              </span>
+            </a>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-sm-6 menu__category flex category">
+            <a href="#bread" class="category__tab category__btn step-link btn flex" aria-label="Категория Хлеб" data-path="bread">
+              <span class="category__tab-text">
+                Хлеб
+              </span>
+            </a>
+          </div>
+
+          <div class="col-xl-4 col-lg-6 col-sm-6 menu__category flex category">
+            <a href="#hot-drinks" class="category__tab category__btn step-link btn flex" aria-label="Категория Горячии напитки" data-path="hot-drinks">
+              <span class="category__tab-text">
+                Горячии напитки
+              </span>
+            </a>
+          </div>
+          
+          <div class="col-xl-4 col-lg-6 col-sm-12 menu__category flex category">
+            <a href="#cold-drinks" class="category__tab category__btn step-link btn flex" aria-label="Категория Холодные напитки" data-path="cold-drinks">
+              <span class="category__tab-text">
+                Холодные напитки
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tabs for menu -->
+        <div class="row menu-category-tab-content tab-content align-items-stretch tab-content-active" id="pork" data-target="pork">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Шашлык</span> из&nbsp;свинины (корейка)
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    150₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Шашлык</span> из&nbsp;свинины (шея)
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    170₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Шашлык</span> из&nbsp;свинины (люля)
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    150₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="sheepmeat" data-target="sheepmeat">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Шашлык</span> из баранины (антрикот)
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    210₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Шашлык</span> из баранины (мякоть на кости) 
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    190₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Шашлык</span> из баранины (люля) 
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    130₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="bird" data-target="bird">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Индейка</span> (мякоть)
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    160₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Индейка</span> (люля) 
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    150₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Курица</span> (крылышки) 
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    100₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="entree" data-target="entree">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Хашлама
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    350₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Шаурма 
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    250₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="sauces" data-target="sauces">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Соус</span> красный
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    80₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Соус</span> белый 
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    80₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="salads" data-target="salads">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Салат</span> овощной
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    130₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="vegetables" data-target="vegetables">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Помидор
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    50₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Баклажан
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    60₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Болгарский перец & Острый
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    50₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Грибы
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шампур (5 шт.)
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    200₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Картошка с ...
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    100₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Картошка с ...
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    200₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="slicing" data-target="slicing">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  <span>Сыр</span> брынза
+                </p>     
+                <span class="product-weight">
+                  100&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    100₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="bread" data-target="bread">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Лаваш
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    70₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Тонкий лаваш
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    50₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="hot-drinks" data-target="hot-drinks">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Чай
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    30₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Кофе
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    30₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Варёный кофе
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    50₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row menu-category-tab-content tab-content align-items-stretch" id="cold-drinks" data-target="cold-drinks">
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Пепси
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    130₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Кола
+                </p>     
+                <span class="product-weight">
+                  1&nbsp;шт.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    130₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+            <div class="product-photo"></div>
+
+            <div class="product product-card product-card-pork align-self-stretch">
+              <div class="product__content flex">
+                <p class="product-name">
+                  Мацони
+                </p>     
+                <span class="product-weight">
+                  200&nbsp;гр.
+                </span>
+                <div class="product__descr-bottom flex">
+                  <p class="product-price">
+                    70₽
+                  </p>
+                  <button class="in-basket in-basket-btn btn flex">
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery section" id="delivery">
+      <div class="delivery__container container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="delivery__title title-h2">
+              Доставка
+            </h2>
+          </div>
+        </div>
+
+        <div class="row delivery__content">
+          <div class="col-xl-7 col-lg-7 col-sm-0 delivery__content-img"></div>
+
+          <div class="col-xl-5 col-lg-7 col-sm-12 flex delivery__content-text">
+            <p class="delivery__content-descr descr">
+              <span>Бесплатная</span> доставка при заказе от&nbsp;<span>двух килограмм</span> мяса
+            </p>
+            <p class="delivery__content-descr descr">
+              Время доставки <span>от&nbsp;60&nbsp;до&nbsp;90&nbsp;</span>минут
+            </p>
+            <p class="delivery__content-descr descr">
+              Остыть не&nbsp;успеет! <span>Обещаем!</span> 😎
+            </p>
+          </div>
+        </div> 
+        
+        <div class="row">
+          <div class="col-12">
+            <a href="#menu" class="delivery__btn btn flex">
+              Заказать
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts section" id="contacts">
+      <div class="contacts__container container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="contacts__title title-h2">
+              Контакты
+            </h2>
+          </div>
+        </div>
+
+        <div class="contacts__content row">
+          <div id="map" class="col-xl-6 col-lg-6 col-sm-12 contacts__content-map">
+          </div>
+
+          <div class="col-xl-6 col-lg-6 col-sm-12 contacts__content-info">
+            <p class="contacts-descr contacts-address">ул. 2-я Линия, 190, Краснодар</p>
+            <div class="contacts-time">
+              <p class="contacts-descr"><span>Часы работы:</span></p>
+              <p class="contacts-descr">Пн-Вс: с&nbsp;10:00 до&nbsp;23:00</p>
+              <p class="contacts-descr">Мы&nbsp;всегда для вас открыты</p>
+            </div>
+            <p class="contacts-descr">
+              <span>Телефон:</span> 
+              <a class="contacts-descr contacts-phone" href="tel:+79189611046">+7 (918) 961-10-46</a>
+            </p>
+            <a class="contacts-descr contacts-mail" href="mailto:shashlyktun@yandex.ru">shashlyktun@<span>yandex</span>.ru</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="reviews">
+      <div class="reviews__container container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="reviews__title title-h2">
+              <span>Отзывы</span> о нас
+            </h2>
+          </div>
+        </div>
+
+        <div class="row reviews-swiper">
+          <div class="reviews-swiper-container col-10">
+            <div class="swiper-wrapper">
+              <div class="reviews__content swiper-slide">
+                <div class="reviews__content-text">
+                  <p class="reviews-person-name reviews-person-descr">Ирина С.</p>
+                  <p class="reviews-person-text reviews-person-descr">Все <span>очень</span> вкусно! Уютное место и доброжелательный персонал)
+                    <span>Спасибо им</span> за вечер.</p>
+                </div>
+              </div>
+              
+              <div class="reviews__content swiper-slide">
+                <div class="reviews__content-text">
+                  <p class="reviews-person-name reviews-person-descr">Денис Даниленко</p>
+                  <p class="reviews-person-text reviews-person-descr">
+                    <span>Классное</span> место
+                  </p>
+                </div>
+              </div>
+
+              <div class="reviews__content swiper-slide">
+                <div class="reviews__content-text">
+                  <p class="reviews-person-name reviews-person-descr">Александр О.</p>
+                  <p class="reviews-person-text reviews-person-descr"><span>Замечательно</span> готовят мясо. Советую.</p>
+                </div>
+              </div>
+
+              <div class="reviews__content swiper-slide">
+                <div class="reviews__content-text">
+                  <p class="reviews-person-name reviews-person-descr">Гвоздев Денис Робертович</p>
+                  <p class="reviews-person-text reviews-person-descr">
+                    <span>Вкусный шашлык</span> из баранины и из свинины, цены не ломят
+                  </p>
+                </div>
+              </div>
+
+              <div class="reviews__content swiper-slide">
+                <div class="reviews__content-text">
+                  <p class="reviews-person-name reviews-person-descr">Валентина Верещагина</p>
+                  <p class="reviews-person-text reviews-person-descr">
+                    <span>Очень</span> приветливый хозяин. Шашлык <span>очень вкусный</span> 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn reviews__content-btn reviews__content-prev flex">
+            <svg class="reviews__content-btn-svg reviews__content-prev-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 0.500003C11.469 0.500002 0.500013 11.469 0.500013 25C0.500012 38.531 11.469 49.5 25 49.5C38.531 49.5 49.5 38.531 49.5 25C49.5 11.469 38.531 0.500003 25 0.500003Z" stroke="black"/>
+              <path d="M26.6667 16.6667L18.3333 25L26.6667 33.3333" stroke="black"/>
+            </svg>
+          </button>
+
+          <button class="btn reviews__content-btn reviews__content-next flex">
+            <svg class="reviews__content-btn-svg reviews__content-next-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 0.500003C38.531 0.500002 49.5 11.469 49.5 25C49.5 38.531 38.531 49.5 25 49.5C11.469 49.5 0.499999 38.531 0.499999 25C0.499998 11.469 11.469 0.500003 25 0.500003Z" stroke="black"/>
+              <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black"/>
+            </svg> 
+          </button>
+        </div>
+
+        <div class="row">
+          <div class="col-12 flex">
+            <div class="reviews-swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer section">
+      <div class="footer__container container">
+        <div class="row footer-row">
+          <div class="col-12 flex footer-content">
+            <img class="footer-logo" src="img/logo.webp" alt="Логотип Шашлык Тун">
+
+            <div class="footer-content-info flex">
+              <p class="footer-content-descr footer-content-info__address">
+                ул. 2-я Линия, 190, Краснодар
+              </p>
+              <p class="footer-content-descr footer-content-info__time">
+                Пн-Вс: с 10:00 до 23:00
+              </p>
+              <p class="footer-content-descr footer-content-info__phone">
+                <span>Телефон: </span><a href="tel:+79189611046">+7 (918) 961-10-46</a>
+              </p>
+              <p class="footer-content-descr footer-content-info__email">
+                <a href="mailto:shashlyktun@yandex.ru">shashlyktun@yandex.ru</a>
+              </p>
+            </div>
+            
+            <ul class="footer-content__social-list flex">
+              <li class="footer-content__social-list-item">
+                <a class="footer-content__social-list-item-link inst-link" href="https://instagram.com/shashlyk_tun?igshid=YmMyMTA2M2Y=">
+                  <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0.0874023C25.4312 0.0874023 26.1138 0.109421 28.2459 0.208504C29.9052 0.240251 31.547 0.554215 33.1009 1.13694C34.429 1.65181 35.6351 2.43793 36.6423 3.44511C37.6495 4.4523 38.4356 5.65842 38.9505 6.98649C39.532 8.53695 39.8459 10.1749 39.8789 11.8305C39.978 13.9626 40 14.6452 40 20.0764C40 25.5076 39.978 26.1902 39.8789 28.3223C39.8472 29.9816 39.5332 31.6234 38.9505 33.1773C38.4356 34.5054 37.6495 35.7115 36.6423 36.7187C35.6351 37.7259 34.429 38.512 33.1009 39.0269C31.5511 39.6121 29.9131 39.9298 28.2569 39.9663C26.1248 40.0654 25.4422 40.0874 20.011 40.0874C14.5798 40.0874 13.8972 40.0654 11.7651 39.9663C10.1058 39.9346 8.46403 39.6206 6.91009 39.0379C5.58202 38.523 4.3759 37.7369 3.36872 36.7297C2.36153 35.7225 1.57542 34.5164 1.06056 33.1883C0.475292 31.6385 0.157611 30.0005 0.121096 28.3443C0.0220134 26.2122 0 25.5296 0 20.0984C0 14.6672 0.0220134 13.9846 0.121096 11.8525C0.152843 10.1932 0.466807 8.55144 1.04954 6.99749C1.56312 5.6674 2.34866 4.45913 3.35591 3.44998C4.36317 2.44083 5.56995 1.65303 6.89908 1.13694C8.44954 0.555439 10.0875 0.241495 11.7431 0.208504C13.8862 0.109421 14.5688 0.0874023 20 0.0874023ZM28.0734 3.8085C25.967 3.71309 25.3321 3.69107 20 3.69107C14.6679 3.69107 14.0257 3.71309 11.9266 3.8085C10.6563 3.82151 9.39769 4.05238 8.2055 4.49107C7.34146 4.82419 6.55679 5.33459 5.90199 5.98939C5.24719 6.64419 4.73679 7.42887 4.40367 8.29291C3.96455 9.48256 3.73245 10.7386 3.71743 12.0067C3.62202 14.1131 3.6 14.748 3.6 20.0801C3.6 25.4122 3.62202 26.0544 3.71743 28.1535C3.73077 29.4264 3.9629 30.6876 4.40367 31.8819C4.73679 32.7459 5.24719 33.5306 5.90199 34.1854C6.55679 34.8402 7.34146 35.3506 8.2055 35.6837C9.39516 36.1229 10.6512 36.3549 11.9193 36.37C14.0257 36.4654 14.6606 36.4874 19.9927 36.4874C25.3248 36.4874 25.967 36.4654 28.0661 36.37C29.339 36.3566 30.6002 36.1245 31.7945 35.6837C32.6585 35.3506 33.4432 34.8402 34.098 34.1854C34.7528 33.5306 35.2632 32.7459 35.5963 31.8819C36.0354 30.6922 36.2675 29.4362 36.2826 28.1681C36.378 26.0617 36.4 25.4269 36.4 20.0947C36.4 14.7626 36.378 14.1204 36.2826 12.0213C36.2692 10.7484 36.0371 9.4872 35.5963 8.29291C35.2632 7.42887 34.7528 6.64419 34.098 5.98939C33.4432 5.33459 32.6585 4.82419 31.7945 4.49107C30.6046 4.05321 29.3485 3.82235 28.0807 3.8085H28.0734ZM20 26.7553C21.3188 26.7553 22.6079 26.3642 23.7045 25.6315C24.801 24.8989 25.6557 23.8575 26.1603 22.6391C26.665 21.4207 26.797 20.08 26.5398 18.7866C26.2825 17.4931 25.6474 16.305 24.7149 15.3725C23.7824 14.44 22.5943 13.8049 21.3008 13.5476C20.0074 13.2904 18.6667 13.4224 17.4483 13.9271C16.2299 14.4318 15.1885 15.2864 14.4559 16.3829C13.7232 17.4795 13.3321 18.7686 13.3321 20.0874C13.3331 21.8555 14.0359 23.551 15.2862 24.8012C16.5364 26.0515 18.2319 26.7543 20 26.7553ZM20 9.81584C22.0322 9.81584 24.0189 10.4185 25.7086 11.5475C27.3984 12.6766 28.7154 14.2814 29.4931 16.1589C30.2708 18.0365 30.4743 20.1025 30.0778 22.0957C29.6813 24.0889 28.7027 25.9197 27.2657 27.3568C25.8287 28.7938 23.9978 29.7724 22.0046 30.1689C20.0114 30.5653 17.9454 30.3619 16.0678 29.5841C14.1903 28.8064 12.5855 27.4894 11.4565 25.7997C10.3274 24.1099 9.72477 22.1233 9.72477 20.0911C9.72477 17.3659 10.8073 14.7524 12.7343 12.8254C14.6613 10.8984 17.2748 9.81584 20 9.81584ZM33.0752 9.41217C33.0752 9.88685 32.9345 10.3509 32.6708 10.7455C32.407 11.1402 32.0322 11.4478 31.5937 11.6295C31.1551 11.8111 30.6726 11.8587 30.207 11.7661C29.7415 11.6735 29.3138 11.4449 28.9782 11.1092C28.6425 10.7736 28.4139 10.3459 28.3213 9.88039C28.2287 9.41483 28.2763 8.93227 28.4579 8.49373C28.6396 8.05519 28.9472 7.68036 29.3419 7.41665C29.7365 7.15293 30.2006 7.01217 30.6752 7.01217C31.3117 7.01217 31.9222 7.26503 32.3723 7.71512C32.8224 8.1652 33.0752 8.77565 33.0752 9.41217Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-content__social-list-item">
+                <a class="footer-content__social-list-item-link telegram-link" href="https://t.me/">
+                  <svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.74918 14.7847C13.4871 10.1062 20.6468 7.02155 24.2284 5.53075C34.4579 1.27819 36.5945 0.539659 37.9685 0.512179C38.478 0.502275 38.9778 0.652451 39.3975 0.941557C39.692 1.19548 39.8797 1.55128 39.923 1.93772C39.997 2.41831 40.0177 2.90559 39.9849 3.39073C39.4318 9.23028 37.0307 23.3448 35.8113 29.8679C35.296 32.6159 34.2793 33.5537 33.2934 33.6464C31.1568 33.8422 29.5149 32.2312 27.4539 30.8744C24.2112 28.7481 22.3803 27.4393 19.2339 25.3509C15.5962 22.9463 17.956 21.6376 20.0274 19.4873C20.5701 18.9239 29.9889 10.3501 30.1744 9.57378C30.1989 9.45914 30.1961 9.34036 30.1662 9.227C30.1364 9.11365 30.0804 9.00888 30.0027 8.92112C29.8899 8.85065 29.7623 8.80744 29.6299 8.79492C29.4975 8.7824 29.3641 8.80091 29.2401 8.84899C28.9172 8.91998 23.7395 12.3424 13.7069 19.1163C12.2367 20.1262 10.9051 20.6185 9.71198 20.5933C8.39637 20.5624 5.86817 19.8479 3.98578 19.2193C1.68088 18.4705 -0.136237 18.0755 0.00803384 16.8148C0.0927645 16.1553 1.00647 15.4786 2.74918 14.7847Z" fill="white"/>
+                  </svg>
+                    
+                </a>
+              </li>
+              <li class="footer-content__social-list-item">
+                <a class="footer-content__social-list-item-link whatsapp-link" href="https://api.whatsapp.com/send?phone=79189611046">
+                  <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 40.1745L2.82736 29.8538C0.640008 26.0556 -0.233283 21.642 0.342872 17.2971C0.919027 12.9522 2.91242 8.91869 6.01407 5.82192C9.11572 2.72515 13.1523 0.738076 17.4982 0.168753C21.844 -0.40057 26.2562 0.479657 30.0509 2.67298C33.8456 4.8663 36.8107 8.25019 38.4866 12.3001C40.1625 16.35 40.4556 20.8396 39.3204 25.073C38.1853 29.3064 35.6852 33.047 32.2079 35.7151C28.7306 38.3831 24.4702 39.8295 20.0872 39.83C16.7625 39.8281 13.4912 38.9938 10.5717 37.4033L0 40.1745ZM11.0472 33.8083L11.6539 34.1828C14.205 35.6935 17.1149 36.4915 20.0798 36.4933C23.7513 36.4941 27.3189 35.2746 30.2218 33.0267C33.1247 30.7788 35.1982 27.63 36.1164 24.0751C37.0346 20.5203 36.7454 16.7611 35.2943 13.3886C33.8431 10.0161 31.3123 7.22141 28.0998 5.44399C24.8872 3.66657 21.175 3.00717 17.5469 3.56948C13.9187 4.13178 10.5803 5.88389 8.05642 8.55035C5.53257 11.2168 3.96643 14.6464 3.60421 18.3C3.24199 21.9536 4.10424 25.6239 6.0554 28.7341L6.42988 29.3594L4.75593 35.4672L11.0472 33.8083Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30.1196 24.6484C29.9961 24.4387 29.6628 24.3151 29.1647 24.0679C28.6666 23.8208 26.2213 22.6149 25.7644 22.4464C25.3075 22.2779 24.978 22.1993 24.641 22.6973C24.3039 23.1954 23.3565 24.3151 23.0681 24.6484C22.7798 24.9817 22.4839 25.0229 21.9896 24.772C20.53 24.1858 19.1831 23.3508 18.0089 22.3041C16.9209 21.2977 15.9882 20.1354 15.2415 18.8551C14.9494 18.3571 15.2078 18.1062 15.4587 17.8403C15.7096 17.5744 15.9567 17.2561 16.2076 16.9677C16.4135 16.7166 16.5814 16.4364 16.7057 16.1364C16.7712 15.9988 16.8018 15.8472 16.7946 15.695C16.7874 15.5427 16.7427 15.3946 16.6645 15.2638C16.5409 15.0167 15.541 12.5676 15.1291 11.5715C14.7172 10.5753 14.3165 10.7326 14.0057 10.7139C13.6948 10.6952 13.384 10.7139 13.0545 10.7139C12.7985 10.7181 12.5463 10.776 12.3141 10.8837C12.0819 10.9914 11.8749 11.1466 11.7063 11.3393C11.1479 11.8688 10.7049 12.5081 10.4052 13.217C10.1056 13.9258 9.95569 14.689 9.96501 15.4586C9.96501 17.9077 11.7475 20.2744 11.9984 20.6077C12.2493 20.941 15.5073 25.9666 20.4992 28.1198C21.426 28.5197 22.3735 28.8697 23.3378 29.1684C24.353 29.4767 25.4261 29.5446 26.4722 29.3669C27.4271 29.2245 29.4156 28.161 29.8425 27.0001C30.2694 25.8392 30.2432 24.8543 30.1196 24.6484Z" fill="white"/>
+                  </svg>
+                    
+                </a>
+              </li>
+            </ul>
+
+            <a class="footer-privacy" href="privacy.html">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+    <a class="btn" id="btn-up" href="#header" type="button">
+      <svg width="50" height="50" viewBox="0 0 50 50" fill="red" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 0.500003C38.531 0.500002 49.5 11.469 49.5 25C49.5 38.531 38.531 49.5 25 49.5C11.469 49.5 0.499999 38.531 0.499999 25C0.499998 11.469 11.469 0.500003 25 0.500003Z" stroke="transparent"/>
+        <path stroke-width="2" d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="white"/>
+      </svg>
+    </a>
+
+    <!-- Модальное окно пока для примера корзины -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam unde ipsam, optio odit eaque corrupti nihil dolore fugit autem, architecto, debitis voluptas nobis. Numquam, consectetur qui dolores repellat reprehenderit amet.
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- YANDEX MAPS SETTINGS -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
+  <script>
+    ymaps.ready(init);
+    function init(){
+      var myMap = new ymaps.Map("map", {
+        center: [45.05649995, 38.93420827],
+        controls: [],
+        zoom: 15
+      });
+      
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+        iconImageSize: [20, 20],
+        iconImageOffset: [0, 0]
+      }),
+      myMap.geoObjects.add(myPlacemark);
+      myMap.behaviors.disable('scrollZoom');
+      myMap.behaviors.disable('drag');
+    }
+  </script>
+
+  <!-- SWIPER SETTINGS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/swiper-reviews.min.js"></script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

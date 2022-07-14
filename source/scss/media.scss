@@ -1,0 +1,329 @@
+@media (max-width: 991px ) {
+  .section {
+    padding: 50px 0;
+  }
+
+  /* HEADER */
+  .navbar{
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  } 
+  .nav {
+    margin: 0;
+    max-width: 700px;
+    .nav__item.nav-item.basket {
+      display: none;
+    }
+    .nav__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    .nav__list {
+      padding: 25px 0;
+      align-items: flex-start;
+      .nav__link.nav-link {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+  .basket__link-low-resolution {
+    display: block;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link.number__link {
+    color: $color_red;
+  }
+
+  .header__logo-link {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .navbar-toggler-icon {
+      background-image: none;
+      width: 1.5em;
+      height: 2px;
+      background-color: $color_white;
+      transition: transform linear .2s, opacity linear .2s;
+      &.active.navbar-toggler-icon-top {
+        transform-origin: top;
+        transform: translateY(10.5px) rotate(45deg);
+      }
+      &.active.navbar-toggler-icon-medium {
+        transform: scaleX(0);
+        opacity: 0;
+      }
+      &.active.navbar-toggler-icon-bottom {
+        transform: translateY(-10.5px) rotate(-45deg);
+      }
+    }
+  }
+  /* ------------------------------ */
+
+  /* ABOUT-US */
+  .about-us__content {
+    margin-bottom: 50px;
+  }
+  .card-descr {
+    margin-bottom: 15px;
+  }
+  .card-circle {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    &.card-circle_cooks {
+      order: 2;
+    }
+  }
+  /* ------------------------------ */
+
+  /* CONTACTS */
+  .contacts__content {
+    justify-content: center;
+    .contacts__content-map {
+      margin-bottom: 20px;
+    }
+    .contacts__content-info {
+      max-width: 540px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .title-h1 {
+    font-size: 55px;
+    line-height: 55px;
+  }
+  .title-h2 {
+    margin-bottom: 20px;
+  }
+  .descr {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  /* ------------------------------ */
+
+  /* ABOUT-US */
+  .about-us__descr:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  /* ------------------------------ */
+
+  /* MENU */ 
+  .category__btn .category__tab-text {
+    font-size: 17px;
+  }
+
+  .menu-category-content:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .product-card .product__content .product-name {
+    font-size: 16px;
+  }
+
+  .product-card .product__content .product__descr-bottom .product-price {
+    font-size: 17px;
+  }
+  .product-card .product__content .product__descr-bottom .in-basket-btn {
+    max-width: 130px;
+    span {
+      font-size: 16px;
+    }
+  }
+  /* ------------------------------ */
+
+  /* CONTACTS */
+  .contacts__content .contacts__content-map {
+    margin-bottom: 15px;
+  }
+  .contacts .contacts-address, .contacts .contacts-phone, .contacts .contacts-time {
+    margin-bottom: 10px;
+  }
+  .contacts .contacts-descr {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  /* ------------------------------ */
+
+  /* REVIEWS */
+  .reviews-swiper .reviews-person-descr {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .title-h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .descr {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  /* HEADER */
+  .header__logo-link {
+    width: 123px;
+    height: 47px;
+  }
+
+  .nav .nav__list .nav__link.nav-link {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  /* ------------------------------ */
+
+  /* HERO */
+  .hero-content {
+    margin: auto;
+    max-width: 320px;
+  }
+
+  .title-h1 {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  .hero__descr {
+    margin-bottom: 40px;
+    max-width: 320px;
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .hero__btn {
+    font-size: 17px;
+  }
+  /* ------------------------------ */
+
+  /* ABOUT-US */
+  .about-us__descr:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .about-us__content {
+    margin-bottom: 20px;
+  }
+
+  .card-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .utp:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  /* ------------------------------ */
+
+  /* MENU */
+  .category__btn {
+    margin-bottom: 10px;
+    height: 45px;
+    .category__tab-text {
+      font-size: 15px;
+    }
+  }
+  .product-photo {
+    min-height: 170px;
+  } 
+
+  .product-card {
+    min-height: 230px;
+    .product__content {
+      padding: 17px 17px;
+    }
+  }
+  /* ------------------------------ */
+
+  /* DELIVERY  */
+  .delivery__content .delivery__content-img {
+    height: 200px;
+  }
+  .delivery__content {
+    margin-bottom: 30px;
+  }
+  .delivery__btn {
+    font-size: 17px;
+  }
+
+  .contacts .contacts__content-map {
+    height: 300px;
+  }
+  .contacts__content .contacts__content-map {
+    margin-bottom: 10px;
+  }
+
+  .contacts .contacts-descr {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .contacts .contacts-address, 
+  .contacts .contacts-phone, 
+  .contacts .contacts-time {
+    margin-bottom: 0px;
+  }
+  /* ------------------------------ */
+
+  /* REVIEWS */
+  .reviews-swiper {
+    margin-bottom: 10px;
+    .reviews-person-descr {
+      font-size: 15px;
+      line-height: 28px;
+    }
+    .reviews-person-name {
+      margin-bottom: 0px;
+    }
+  } 
+
+  .reviews__content-next, .reviews__content-prev {  
+    width: 30px;
+    height: 30px;
+  }
+
+  .reviews__content-prev {
+    margin-left: 5px;
+  }
+  .reviews__content-next {
+    margin-right: 5px;
+  }
+  /* ------------------------------ */
+
+  /* FOOTER */
+  .footer .footer-row .footer-content .footer-logo {
+    margin-bottom: 10px;
+    max-width: 123px;
+    height: 47px;
+  }
+  .footer .footer-row .footer-content .footer-content-info .footer-content-descr {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .footer .footer-row .footer-content .footer-content-info {
+    margin-bottom: 20px;
+  }
+  .footer .footer-row .footer-content .footer-content__social-list {
+    margin-bottom: 20px;
+    max-width: 160px; 
+  }
+  .footer-content__social-list-item-link {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .footer .footer-row .footer-content .footer-privacy {
+    font-size: 12px;
+    line-height: 10px;
+  }
+}
