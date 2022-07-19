@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', function(){
   /* функция для кнопки скрола наверх */
-  window.onscroll = function() {scrollFunction()}
-
-  function scrollFunction() {
+  const btnUp = document.getElementById('btn-up');
+  window.onscroll = () => {
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-      document.getElementById('btn-up').style.display = 'block';
+      btnUp.classList.add('btn-up-visible');
     }
     else {
-      document.getElementById('btn-up').style.display = 'none';
+      btnUp.classList.remove('btn-up-visible');
     }
   }
+
+  btnUp.onclick = (event) => {
+    event.preventDefault();
+    window.scrollTo(0,0);
+  }  
   /* ----------------------------------------------- */
 
   /* функция для расчета высоты карточек */
@@ -200,4 +204,105 @@ document.addEventListener('DOMContentLoaded', function(){
   })
   
   /* ----------------------------------------------- */
+
+  /* Добавление продуктов в корзину */
+  const inBasketBtn = document.querySelectorAll('.in-basket-btn');
+  const productsInBasketCount = document.querySelectorAll('.basket__count');
+  const btnCleanBasket = document.querySelector('.btn-clean-basket');
+  let productsInBasket;
+  let productCard = {};
+  let productsCount;
+
+  /* checkProductsInBasket функция для проверки наличия продуктов в корзине */
+  const checkProductsInBasket = () => {
+    /* Проверка на наличие продуктов в корзине (для счетчика)*/
+    if (localStorage.getItem('productsCount')) {
+      productsCount = localStorage.getItem('productsCount');
+  
+      productsInBasketCount.forEach(count => {
+        count.innerText = productsCount;
+      });
+    }  
+    else {
+      productsCount = 0;
+      productsInBasketCount.forEach(count => {
+        count.innerText = productsCount;
+      });
+    }
+  
+    /* Проверка на наличие продуктов в корзине (для массива продуктов)*/
+    if (localStorage.getItem('productsInBasket')) {
+      let arrayParse = localStorage.getItem('productsInBasket')
+      productsInBasket = JSON.parse(arrayParse)
+    }
+    else productsInBasket = [];
+  }
+  checkProductsInBasket();
+
+  const renderingInfoInBasket = () => {
+    if (localStorage.length > 0) {
+      let informationsFromLocalStorage = JSON.parse(localStorage.getItem('productsInBasket'));
+      // console.log(informationsFromLocalStorage);
+    }
+  }
+
+  renderingInfoInBasket ();
+
+  inBasketBtn.forEach(btn => {    
+    btn.addEventListener('click', (event) => {
+      productsCount++;
+      localStorage.setItem('productsCount', JSON.stringify(productsCount));
+      productsInBasketCount.forEach(count => {
+        count.innerText = productsCount;
+      });
+
+      let productId = event.currentTarget.id;
+      let productName = event.currentTarget.parentNode.parentNode.firstChild.nextElementSibling.innerText;
+      let productPrice = event.currentTarget.parentNode.firstChild.nextElementSibling.innerText;
+
+      if (productsInBasket.length !== 0) {
+        let containProduct = false;
+
+        productsInBasket.forEach(product => {
+          if (product.id === productId) {
+            product.count++;
+            localStorage.setItem('productsInBasket', JSON.stringify(productsInBasket));
+            containProduct = true;
+          }  
+        })
+
+        if (containProduct === false) {
+          productCard = {
+            id: productId,
+            productName: productName,
+            productPrice: productPrice,
+            count: 1
+          };
+          productsInBasket.push(productCard);
+          localStorage.setItem('productsInBasket', JSON.stringify(productsInBasket));
+        }
+
+      }
+      else {
+        productCard = {
+          id: productId,
+          productName: productName,
+          productPrice: productPrice,
+          count: 1
+        };
+        productsInBasket.push(productCard);
+        localStorage.setItem('productsInBasket', JSON.stringify(productsInBasket));
+      }
+    })
+  })
+
+  btnCleanBasket.addEventListener('click', ()=> {
+    if (localStorage.length > 0) {
+      localStorage.clear();
+      checkProductsInBasket();
+    }
+    else alert('Ваша корзина пуста!')
+  });
+
+
 })

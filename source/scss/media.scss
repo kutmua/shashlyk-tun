@@ -13,8 +13,16 @@
     .nav__item.nav-item.basket {
       display: none;
     }
+    .nav__item.nav-item.address {
+      display: block;
+    }
+    .address-link {
+      color: $color_white;
+      font-size: 20px;
+      line-height: 25px;
+    }
     .nav__item:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .nav__list {
       padding: 25px 0;
@@ -180,8 +188,14 @@
   }
 
   .nav .nav__list .nav-link {
+    padding: 10px;
     font-size: 18px;
     line-height: 20px;
+  }
+  .nav .address-link {
+    padding: 10px;
+    font-size: 17px;
+    line-height: 15px;
   }
   /* ------------------------------ */
 
