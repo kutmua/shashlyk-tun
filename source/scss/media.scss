@@ -342,4 +342,33 @@
     font-size: 12px;
     line-height: 10px;
   }
+  /* ------------------------------ */
+
+  /* MODAL */
+  .modal-content .modal-title {
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .modal-body.info-card {
+    .info-card-descr {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .info-card-list {
+      .info-card-list__item-title {
+        font-weight: 700;
+        font-size: 15px;
+        color: $color_red;
+      }
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .info-card-list__item {
+        font-size: 14px;
+        line-height: 23px;
+      }
+    }
+  }
 }

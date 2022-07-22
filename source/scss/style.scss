@@ -514,11 +514,127 @@ body{
 .product-photo {
   width: 100%;
   min-height: 250px;
-  background-image: url(../img/product-photo.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 10px 10px 0 0 ;
+  &.product-card-sheepmeat-entrecote {
+    background-image: url(../img/product-photo-sheepmeat-1.webp);
+  }
+  &.product-card-sheepmeat-bone {
+    background-image: url(../img/product-photo-sheepmeat-2.webp);
+  }
+  &.product-card-sheepmeat-pulp {
+    background-image: url(../img/product-photo-sheepmeat-3.webp);
+  }
+  &.product-card-sheepmeat-lyulya {
+    background-image: url(../img/product-photo-sheepmeat-4.webp);
+  }
+  &.product-card-beef-meat {
+    background-image: url(../img/product-photo-beef-1.webp);
+  }
+  &.product-card-turkey-lyulya {
+    background-image: url(../img/product-photo-turkey-lyulya.webp);
+  }
+  &.product-card-chiken-lyulya {
+    background-image: url(../img/product-photo-chicken-lyulya.webp);
+  }
+  &.product-card-turkey-kebab {
+    background-image: url(../img/product-photo-turkey-kebab.webp);
+  }
+  &.product-card-chicken-wings-kebab {
+    background-image: url(../img/product-photo-chicken-wings.webp);
+  }
+  &.product-card-salamon-kebab {
+    background-image: url(../img/product-photo-salmon-kebab.webp);
+  }
+  &.product-card-vegetables-tomato {
+    background-image: url(../img/product-photo-vegetables-tomato.webp);
+  }
+  &.product-card-vegetables-pepper {
+    background-image: url(../img/product-photo-vegetables-pepper.webp);
+  }
+  &.product-card-vegetables-spicy-pepper {
+    background-image: url(../img/product-photo-vegetables-spicy-pepper.webp);
+  }
+  &.product-card-vegetables-eggplant {
+    background-image: url(../img/product-photo-vegetables-eggplant.webp);
+  }
+  &.product-card-vegetables-mushrooms {
+    background-image: url(../img/product-photo-vegetables-mushrooms.webp);
+  }
+  &.product-card-vegetables-potato {
+    background-image: url(../img/product-photo-vegetables-potato.webp);
+  }
+  &.product-card-vegetables-potato-bacon {
+    background-image: url(../img/product-photo-vegetables-potato-bacon.webp);
+  }
+  &.product-card-vegetable-salad {
+    background-image: url(../img/product-photo-salads-vegetables.webp);
+  }
+  &.product-card-salad-choban {
+    background-image: url(../img/product-photo-salads-choban.webp);
+  }
+  &.product-card-salad-caesar-chicken {
+    background-image: url(../img/product-photo-salads-caesar-chicken.webp);
+  }
+  &.product-card-salad-caesar-shrimps {
+    background-image: url(../img/product-photo-salads-caesar-shrimps.webp);
+  }
+  &.product-card-sauces-white {
+    background-image: url(../img/product-photo-sauce-white.webp);
+  }
+  &.product-card-sauces-red {
+    background-image: url(../img/product-photo-sauce-red.webp);
+  }
+  &.product-card-cheese-brinza {
+    background-image: url(../img/product-photo-cheese-brinza.webp);
+  }
+  &.product-card-maconi {
+    background-image: url(../img/product-photo-maconi.webp);
+  }
+  &.product-card-bread-lavash {
+    background-image: url(../img/product-photo-bread-lavash.webp);
+  }
+  &.product-card-bread-lavash-tonkiy {
+    background-image: url(../img/product-photo-bread-lavash-tonkiy.webp);
+  }
+  &.product-card-hot-drinks-black-tea {
+    background-image: url(../img/product-photo-hot-drinks-black-tea.webp);
+  }
+  &.product-card-hot-drinks-green-tea {
+    background-image: url(../img/product-photo-hot-drinks-green-tea.webp);
+  }
+  &.product-card-hot-drinks-fruit-tea {
+    background-image: url(../img/product-photo-hot-drinks-fruit-tea.webp);
+  }
+  &.product-card-hot-drinks-coffee {
+    background-image: url(../img/product-photo-hot-drinks-coffee.webp);
+  }
+  &.product-card-hot-drinks-boiled-coffee {
+    background-image: url(../img/product-photo-hot-drinks-boiled-coffee.webp);
+  }
+  &.product-card-cold-drinks-cola {
+    background-image: url(../img/product-photo-cold-drinks-cola.webp);
+  }
+  &.product-card-cold-drinks-fanta {
+    background-image: url(../img/product-photo-cold-drinks-fanta.webp);
+  }
+  &.product-card-cold-drinks-lemonade {
+    background-image: url(../img/product-photo-cold-drinks-lemonade.webp);
+  }
+  &.product-card-cold-drinks-mineral {
+    background-image: url(../img/product-photo-cold-drinks-mineral.webp);
+  }
+  &.product-card-cold-drinks-juice {
+    background-image: url(../img/product-photo-cold-drinks-juice.webp);
+  }
+  &.product-card-banquet-menu-photo {
+    background-image: url(../img/product-photo-banquet-menu-photo.webp);
+  }
+  &.product-card-memorial-dinner-photo {
+    background-image: url(../img/product-card-memorial-dinner-photo.webp);
+  }
 }
 
 .product-card {
@@ -541,6 +657,19 @@ body{
       color: $color_white;
       span {
         color: $color_red;
+      }
+      .product-card-tooltip-btn {
+        background: transparent;
+        border-radius: 50px;
+        svg {
+          transition: fill linear .2s;
+        }
+        &:hover svg {
+          fill: red;
+        }
+        &:focus-visible svg {
+          outline: 2px solid white;
+        }
       }
     }
     .product-weight {
@@ -906,19 +1035,71 @@ body{
       color: $color_red;  
     }
   }
-  .btn-close{
+  .btn-close {
     &:hover {
       color: $color_red;
       text-decoration: none;
       opacity: .75;
       }
     &:focus {
-    outline: 0;
-    box-shadow: none;
+      outline: 0;
+      box-shadow: none;
+    }
     &:focus-visible {
       box-shadow: 0 0 0 .25rem $color_red;
     }
   }
+  .modal-body__form-container {
+    .inputs-container {
+      margin-right: 20px;
+    }
+    .form-control {
+      resize: none;
+    }
+    .order-info {
+      flex-direction: column;
+    }
+  }
+}
+.btn-minus,
+.btn-plus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn-plus {
+  .btn-horizontal{
+    transform: translateY(6px);
+  }
+}
+.btn-horizontal {
+  width: 10px;
+  height: 2px;
+  background: $color_black;
+}
+.btn-vertical {
+  width: 2px;
+  height: 10px;
+  background: $color_black;
+}
+
+.modal-body.info-card {
+  .info-card-descr {
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .info-card-list {
+    .info-card-list__item-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: $color_red;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 /* ------------------------------ */

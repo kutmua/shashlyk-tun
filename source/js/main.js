@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
   /* функция для кнопки скрола наверх */
   const btnUp = document.getElementById('btn-up');
   window.onscroll = () => {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
       btnUp.classList.add('btn-up-visible');
     }
     else {
@@ -239,14 +239,73 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   checkProductsInBasket();
 
-  const renderingInfoInBasket = () => {
+  /* orderInformationRender функция отрисовки продуктов в карзине */
+  const orderInformationRender = () => {
     if (localStorage.length > 0) {
       let informationsFromLocalStorage = JSON.parse(localStorage.getItem('productsInBasket'));
-      // console.log(informationsFromLocalStorage);
+      const orderInfoContainer = document.querySelector('.order-info');
+      const orders = document.querySelectorAll('.order');
+
+      /* удаление продуктов, чтобы не было повторений при повторном добавлении */
+      orders.forEach(order => {
+        order.remove();
+      })
+
+      informationsFromLocalStorage.forEach(info => {
+        /* создание элементов для отрисовки */
+        const order = document.createElement('div');
+        const productName = document.createElement('p');
+        const productPrice = document.createElement('p');
+        const productCount = document.createElement('p');
+        const btnMinus = document.createElement('a');
+        const btnPlus = document.createElement('a');
+        const horizontalLineForMinus = document.createElement('div');
+        const horizontalLine = document.createElement('div');
+        const verticalLine = document.createElement('div');
+
+        /* добавление классов */
+        order.classList.add('order', 'flex');
+        productName.classList.add('order-info-product-name');
+        productPrice.classList.add('order-info-product-price');
+        productCount.classList.add('order-info-product-count');
+        btnMinus.classList.add('btn-minus');
+        btnPlus.classList.add('btn-plus');
+        horizontalLineForMinus.classList.add('btn-horizontal');
+        horizontalLine.classList.add('btn-horizontal');
+        verticalLine.classList.add('btn-vertical');
+
+        /* перенос в дом дерево */
+        btnMinus.append(horizontalLineForMinus);
+        btnPlus.append(horizontalLine);
+        btnPlus.append(verticalLine);
+        
+        /* заполнение контентом */
+        let price = Number(info.productPrice.slice(0,-1));
+        let count = Number(info.count);
+        price = price * count;
+
+        productName.textContent = info.productName;
+        productPrice.textContent = price;
+        productCount.textContent = count;
+
+        /* перенос в дом дерево */
+        order.append(productName);
+        order.append(productPrice);
+        order.append(btnMinus);
+        order.append(productCount);
+        order.append(btnPlus);
+        orderInfoContainer.append(order);
+      })
+    }
+    else {
+      const orders = document.querySelectorAll('.order');
+
+      orders.forEach(order => {
+        order.remove();
+      })
     }
   }
-
-  renderingInfoInBasket ();
+  orderInformationRender();
 
   inBasketBtn.forEach(btn => {    
     btn.addEventListener('click', (event) => {
@@ -293,6 +352,8 @@ document.addEventListener('DOMContentLoaded', function(){
         productsInBasket.push(productCard);
         localStorage.setItem('productsInBasket', JSON.stringify(productsInBasket));
       }
+
+      orderInformationRender();
     })
   })
 
@@ -300,6 +361,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if (localStorage.length > 0) {
       localStorage.clear();
       checkProductsInBasket();
+      orderInformationRender();
     }
     else alert('Ваша корзина пуста!')
   });
