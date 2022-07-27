@@ -1603,52 +1603,53 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p class="modal-body__text">
-              <span>Уважаемый клиент,</span> спасибо, что посетили сайт нашего кафе-бара "Шашлык Тун"❤️
-            </p>
-            <p class="modal-body__text">
-              Возможность онлайн заказа сейчас в разработке, а пока можите сделать заказ по нашему номеру телефону: <span><a href="tel:+79189611046">+7 (918) 961-10-46</a></span> 
-            </p>
-            <p class="modal-body__text">
-              Спасибо за понимание! Мы улучшаемся для вас! 
-            </p>
             <div class="modal-body__form-container flex">
-              <div class="inputs-container">
-                <div class="mb-3 inputs-form inputs-form-number-phone">
+              <form class="inputs-container form" method="POST" enctype="multipart/form-data" id="form">
+                <div class="mb-1 inputs-form inputs-form-number-phone">
                   <label for="number-phone" class="form-label">Номер телефона*</label>
-                  <input type="email" class="form-control" id="number-phone" placeholder="+7(999) 999-99-99">
+                  <input type="tel" name="number-phone" class="form-control" id="number-phone" placeholder="+7(999) 999-99-99" data-validate-field="phone" required>
                 </div>
   
-                <div class="mb-3 inputs-form inputs-form-person-name">
+                <div class="mb-1 inputs-form inputs-form-person-name">
                   <label for="person-name" class="form-label">Имя*</label>
-                  <input type="text" class="form-control" id="person-name">
+                  <input type="text" name="person-name" class="form-control" id="person-name" data-validate-field="name" required pattern="[А-Яа-яЁё]">
                 </div>
   
-                <div class="mb-3 inputs-form inputs-form-address">
+                <div class="mb-1 inputs-form inputs-form-address">
                   <label for="input-address" class="form-label">Адрес*</label>
-                  <input type="text" class="form-control" id="input-address">
+                  <input type="text" name="input-address" class="form-control" id="input-address" data-validate-field="address" required>
                 </div>
   
-                <div class="mb-3 inputs-form inputs-form-note-order">
+                <div class="mb-1 inputs-form inputs-form-note-order">
                   <label for="note-order" class="form-label">Примечание к заказу</label>
-                  <textarea class="form-control" id="note-order" rows="3"></textarea>
+                  <textarea type="text" name="note-order" class="form-control" id="note-order" rows="3"></textarea>
                 </div>
   
-                <div class="mb-3 inputs-form inputs-form-courier-comment">
+                <div class="mb-1 inputs-form inputs-form-courier-comment">
                   <label for="courier-comment" class="form-label">Комментарий курьеру</label>
-                  <textarea class="form-control" id="courier-comment" rows="3"></textarea>
+                  <textarea type="text" name="courier-comment" class="form-control" id="courier-comment" rows="3"></textarea>
                 </div>
-              </div>
+
+                <input class="input-file" type="file" name="file[]" multiple id="myfile">
+                <button class="btn btn-success">Оформить</button>
+              </form>
 
               <div class="order-info flex">
-                <h4 class="mb-2 order-info-title">Заказ:</h4>
+                <h5 class="mb-2 order-info-title">Заказ:</h5>
                 
               </div>
-
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger btn-clean-basket">Очистить корзину</button>
+            <div class="order-info-total-sum">
+              <h5 class="order-info-total-sum-title">Итого:</h5>
+              <span class="order-info-total-sum-value"></span>
+            </div>
+
+            <div class="modal-footer__btn-container">
+              <button type="submit" class="btn btn-success">Оформить</button>
+              <button type="button" class="btn btn-danger btn-clean-basket">Очистить корзину</button>
+            </div>
           </div>
         </div>
       </div>
@@ -1882,6 +1883,12 @@
   <!-- SWIPER SETTINGS -->
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/swiper-reviews.min.js"></script>
+
+  <!-- INPUTMASK -->
+  <script src="js/inputmask.min.js"></script>
+
+  <!-- JUST-VALIDATE -->
+  <script src="js/just-validate.min.js"></script>
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>

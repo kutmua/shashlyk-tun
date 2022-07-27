@@ -101,6 +101,25 @@
       max-width: 540px;
     }
   }
+  /* ------------------------------ */
+
+  /* MODAL */
+
+  .modal-body__form-container {
+    flex-direction: column;
+  }
+
+  .modal-content .modal-body__form-container .order-info {
+    margin-bottom: 20px;
+    order: 0;
+    width: 100%;
+  }
+
+  .modal-content .modal-body__form-container .inputs-container {
+    order: 2;
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {

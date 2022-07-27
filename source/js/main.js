@@ -208,13 +208,13 @@ document.addEventListener('DOMContentLoaded', function(){
   /* Добавление продуктов в корзину */
   const inBasketBtn = document.querySelectorAll('.in-basket-btn');
   const productsInBasketCount = document.querySelectorAll('.basket__count');
-  const btnCleanBasket = document.querySelector('.btn-clean-basket');
+  const btnCleanBasket = document.querySelector('.btn-clean-basket'); 
   let productsInBasket;
   let productCard = {};
   let productsCount;
 
   /* checkProductsInBasket функция для проверки наличия продуктов в корзине */
-  const checkProductsInBasket = () => {
+  function checkProductsInBasket(){
     /* Проверка на наличие продуктов в корзине (для счетчика)*/
     if (localStorage.getItem('productsCount')) {
       productsCount = localStorage.getItem('productsCount');
@@ -240,11 +240,12 @@ document.addEventListener('DOMContentLoaded', function(){
   checkProductsInBasket();
 
   /* orderInformationRender функция отрисовки продуктов в карзине */
-  const orderInformationRender = () => {
+  function orderInformationRender(){
     if (localStorage.length > 0) {
       let informationsFromLocalStorage = JSON.parse(localStorage.getItem('productsInBasket'));
       const orderInfoContainer = document.querySelector('.order-info');
       const orders = document.querySelectorAll('.order');
+      const totalSum = document.querySelector('.order-info-total-sum-value');
 
       /* удаление продуктов, чтобы не было повторений при повторном добавлении */
       orders.forEach(order => {
@@ -257,28 +258,49 @@ document.addEventListener('DOMContentLoaded', function(){
         const productName = document.createElement('p');
         const productPrice = document.createElement('p');
         const productCount = document.createElement('p');
+        const btnContainer = document.createElement('div');
         const btnMinus = document.createElement('a');
         const btnPlus = document.createElement('a');
+        const btnTrash = document.createElement('a');
         const horizontalLineForMinus = document.createElement('div');
         const horizontalLine = document.createElement('div');
         const verticalLine = document.createElement('div');
+        const svg = `<svg width="16" height="16" viewBox="0 0 16 16" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 4H15M5 15H11C12.1046 15 13 14.1046 13 13V3C13 1.89543 12.1046 1 11 1H5C3.89543 1 3 1.89543 3 3V13C3 14.1046 3.89543 15 5 15Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+
 
         /* добавление классов */
         order.classList.add('order', 'flex');
+        order.dataset.id = info.id;
         productName.classList.add('order-info-product-name');
         productPrice.classList.add('order-info-product-price');
         productCount.classList.add('order-info-product-count');
+        btnContainer.classList.add('order-info-btn-container', 'flex');
         btnMinus.classList.add('btn-minus');
         btnPlus.classList.add('btn-plus');
         horizontalLineForMinus.classList.add('btn-horizontal');
         horizontalLine.classList.add('btn-horizontal');
         verticalLine.classList.add('btn-vertical');
+        btnTrash.classList.add('btn-trash', 'flex');
 
         /* перенос в дом дерево */
         btnMinus.append(horizontalLineForMinus);
         btnPlus.append(horizontalLine);
         btnPlus.append(verticalLine);
+        btnTrash.innerHTML = svg;
         
+        /* вызов функций плюса (plusFunc) и минуса (minusFunc) */
+        btnMinus.addEventListener('click', event => {
+          minusFunc(event.currentTarget.parentNode.parentNode.dataset.id)
+        });
+        btnPlus.addEventListener('click', event =>{
+          plusFunc(event.currentTarget.parentNode.parentNode.dataset.id)
+        });
+        btnTrash.addEventListener('click', event => {
+          deleteFunc(event.currentTarget.parentNode.dataset.id)
+        })
+
         /* заполнение контентом */
         let price = Number(info.productPrice.slice(0,-1));
         let count = Number(info.count);
@@ -289,23 +311,147 @@ document.addEventListener('DOMContentLoaded', function(){
         productCount.textContent = count;
 
         /* перенос в дом дерево */
+        btnContainer.append(btnMinus);
+        btnContainer.append(productCount);
+        btnContainer.append(btnPlus);
+
         order.append(productName);
+        order.append(btnContainer);
         order.append(productPrice);
-        order.append(btnMinus);
-        order.append(productCount);
-        order.append(btnPlus);
+        order.append(btnTrash);
         orderInfoContainer.append(order);
       })
+
+
+      let totalSumValue = totalSumCounter();
+      totalSum.textContent = `${totalSumValue}₽`;
     }
     else {
       const orders = document.querySelectorAll('.order');
+      const totalSum = document.querySelector('.order-info-total-sum-value');
 
+      totalSum.textContent = `0₽`;
       orders.forEach(order => {
         order.remove();
       })
     }
   }
   orderInformationRender();
+
+  /* totalSumCounter функция подсчета полной цены */
+  function totalSumCounter() {
+    let sumPrice;
+    if (localStorage.length > 0) {
+      let sumCount = JSON.parse(localStorage.getItem('productsInBasket'));
+      sumPrice = 0;
+
+      sumCount.forEach(product => {
+        let price = Number(product.productPrice.slice(0,-1));
+        let quantity = Number(product.count);
+
+        price = price * quantity;
+        sumPrice += price;
+        
+      })
+      
+    }
+    return sumPrice
+  }
+
+  /* minusFunc функция уменьшения продуктов в корзине */
+  function minusFunc(event) {
+    if (localStorage.length > 0) {
+      let storageArray = JSON.parse(localStorage.getItem('productsInBasket'));
+
+      for (let i = 0; i < storageArray.length; i++) {
+        if (productsCount - 1 === 0) {
+          if (storageArray[i].id === event) {
+            localStorage.clear();
+            checkProductsInBasket();
+            orderInformationRender();
+          }
+        }
+        else if (storageArray[i].id === event){
+          if (storageArray[i].count - 1 === 0) {
+            storageArray.splice(i,1);
+            localStorage.setItem('productsInBasket', JSON.stringify(storageArray));
+            productsInBasket = storageArray;
+            orderInformationRender();
+
+            productsCount--;
+            localStorage.setItem('productsCount', JSON.stringify(productsCount));
+            productsInBasketCount.forEach(count => {
+              count.innerText = productsCount;
+            });
+          }
+          else {
+            storageArray[i].count -= 1;
+            localStorage.setItem('productsInBasket', JSON.stringify(storageArray));
+            productsInBasket = storageArray;
+            orderInformationRender();
+
+            productsCount--;
+            localStorage.setItem('productsCount', JSON.stringify(productsCount));
+            productsInBasketCount.forEach(count => {
+              count.innerText = productsCount;
+            });
+          }
+        }
+      }
+    }
+  }
+
+  /* plusFunc функция увеличения продуктов в корзине */
+  function plusFunc(event) {
+    if (localStorage.length > 0) {
+      let storageArray = JSON.parse(localStorage.getItem('productsInBasket'));
+
+      for (let i = 0; i < storageArray.length; i++) {
+        if (storageArray[i].id === event) {
+          storageArray[i].count++;
+          localStorage.setItem('productsInBasket', JSON.stringify(storageArray));
+          productsInBasket = storageArray;
+          orderInformationRender();
+
+          productsCount++;
+          localStorage.setItem('productsCount', JSON.stringify(productsCount));
+          productsInBasketCount.forEach(count => {
+            count.innerText = productsCount;
+          });
+        }
+
+      }
+    }
+  }
+
+  /* deleteFunc функция удаления продуктов в корзине */
+  function deleteFunc(event) {
+    if (localStorage.length > 0) {
+      let storageArray = JSON.parse(localStorage.getItem('productsInBasket'));
+
+      for (let i = 0; i < storageArray.length; i++) {
+        if (storageArray.length - 1 === 0) {
+          if (storageArray[i].id === event) {
+            localStorage.clear();
+            checkProductsInBasket();
+            orderInformationRender();
+          }
+        }
+        else if (storageArray[i].id === event) {
+          productsCount -= storageArray[i].count;
+          localStorage.setItem('productsCount', JSON.stringify(productsCount));
+          productsInBasketCount.forEach(count => {
+            count.innerText = productsCount;
+          });
+
+          storageArray.splice(i,1);
+          localStorage.setItem('productsInBasket', JSON.stringify(storageArray));
+          productsInBasket = storageArray;
+          orderInformationRender();
+        }
+      }
+    }
+  }
 
   inBasketBtn.forEach(btn => {    
     btn.addEventListener('click', (event) => {
@@ -359,12 +505,85 @@ document.addEventListener('DOMContentLoaded', function(){
 
   btnCleanBasket.addEventListener('click', ()=> {
     if (localStorage.length > 0) {
-      localStorage.clear();
-      checkProductsInBasket();
-      orderInformationRender();
+      const warning = confirm('Очистить корзину?');
+      if (warning) {
+        localStorage.clear();
+        checkProductsInBasket();
+        orderInformationRender();
+      }
     }
     else alert('Ваша корзина пуста!')
   });
 
+  /* ----------------------------------------------- */
+
+  /* INPUTMASK */
+  const form = document.querySelector('.form');
+  const telSelector = document.querySelector('input[type="tel"]');
+  const inputMask = new Inputmask('+7 (999) 999-99-99');
+  inputMask.mask(telSelector);
+
+  /* ----------------------------------------------- */
+
+  /* JUST-VALIDATE */
+  new JustValidate('.form', {
+
+    messages: {
+      name: {
+        required: 'Введите имя',
+        minLength: 'Введите 2 и более символов',
+        maxLength: 'Запрещено вводить более 30 символов'
+      },
+
+      phone: {
+        required: 'Укажите ваш телефон',
+        function: 'Введите корректный номер телефона'
+      },
+
+      address: {
+        required: 'Не указан адрес',
+        minLength: 'Введите 2 и более символов'
+      }
+    },
+
+    rules: {
+      name: {
+        required: true,
+        minLength: 2,
+        maxLength: 30,
+      },
+
+      phone: {
+        required: true,
+        function: (name, value) => {
+          const phone = telSelector.inputmask.unmaskedvalue()
+          return Number(phone) && phone.length === 10
+        }
+      },
+      address: {
+        required: true,
+        minLength: 2,
+      }
+    },
+
+    submitHandler: function(thisForm){
+      let formData = new FormData(thisForm);
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено');
+          }
+        }
+      }
+
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      thisForm.reset();
+    }
+  });
 
 })
