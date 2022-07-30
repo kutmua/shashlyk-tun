@@ -369,6 +369,43 @@
     font-weight: 700;
   }
 
+  .modal-content .modal-footer .order-info-total-sum {
+    .order-info-total-sum-title {
+      font-size: 1.2rem;
+    }
+    span {
+      font-size: 17px;
+    }
+  }
+  .btn-group-sm>.btn, .btn-sm {
+    --bs-btn-font-size: 0.775rem;
+  }
+
+  .modal-content .modal-body__form-container .order-info .empty-basket-container p {
+    font-size: 17px;
+  }
+
+  .modal-content .modal-body__form-container .order-info .order-info-title {
+    display: none;
+  }
+  .modal-content .modal-body__form-container .order-info .order {
+    padding: 10px 10px;
+    flex-wrap: wrap;
+    .order-info-product-name {
+      margin-bottom: 10px;
+      max-width: unset;
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
+  .modal-content .modal-body__form-container .order-info .order .order-info-btn-container p {
+    padding: 5px;
+  }
+
+  .order-info-btn-container .btn-minus, .order-info-btn-container .btn-plus {
+    padding: 0 15px;
+  }
+
   .modal-body.info-card {
     .info-card-descr {
       margin-bottom: 10px;
